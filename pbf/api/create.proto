@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package api;
 
+option go_package = "gen/api";
+
 message CreateI {
   string name = 1;
 }

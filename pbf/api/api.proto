@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package api;
 
+option go_package = "gen/api";
+
 import "pbf/api/create.proto";
 import "pbf/api/delete.proto";
 import "pbf/api/search.proto";
