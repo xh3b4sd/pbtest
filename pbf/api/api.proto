@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package api;
+
+import "pbf/api/create.proto";
+import "pbf/api/delete.proto";
+import "pbf/api/search.proto";
+import "pbf/api/update.proto";
+
+service API {
+  rpc Create(CreateI) returns (CreateO) {}
+  rpc Delete(DeleteI) returns (DeleteO) {}
+  rpc Search(SearchI) returns (SearchO) {}
+  rpc Update(UpdateI) returns (UpdateO) {}
+}
