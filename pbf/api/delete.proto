@@ -2,8 +2,6 @@ syntax = "proto3";
 
 package api;
 
-option go_package = "gen/api";
-
 message DeleteI {
   string name = 1;
 }
