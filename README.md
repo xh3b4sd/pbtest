@@ -1,7 +1,15 @@
 # pbtest
 
 ```
-mkdir -p ./gen/api/ && protoc --go_out=plugins=grpc:./gen/api/ --proto_path=./pbf/api/ ./pbf/api/*
+go get -u google.golang.org/protobuf/cmd/protoc-gen-go
+go install google.golang.org/protobuf/cmd/protoc-gen-go
+go get -u google.golang.org/grpc/cmd/protoc-gen-go-grpc
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc
+```
+
+```
+mkdir -p ./gen/api/ && protoc --go-grpc_out=./gen/api/ --proto_path=./pbf/api/ ./pbf/api/*
+mkdir -p ./gen/api/ && protoc --go_out=./gen/api/ --proto_path=./pbf/api/ ./pbf/api/*
 ```
 
 ```

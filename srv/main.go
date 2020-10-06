@@ -46,7 +46,9 @@ func mainE(ctx context.Context) error {
 
 // -------------------------------------------------------------------------- //
 
-type API struct{}
+type API struct {
+	api.UnimplementedAPIServer
+}
 
 func (a *API) Create(ctx context.Context, cre *api.CreateI) (*api.CreateO, error) {
 	fmt.Printf("%#v\n", cre)
