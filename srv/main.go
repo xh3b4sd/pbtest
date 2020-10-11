@@ -7,6 +7,7 @@ import (
 
 	"github.com/xh3b4sd/tracer"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/reflection"
 
 	"github.com/xh3b4sd/pbtest/gen/api"
 )
@@ -31,10 +32,12 @@ func mainE(ctx context.Context) error {
 
 	var a api.APIServer
 	{
-		a = &API{}
-
 		g := grpc.NewServer()
+		reflection.Register(g)
+
+		a = &API{}
 		api.RegisterAPIServer(g, a)
+
 		err := g.Serve(l)
 		if err != nil {
 			return tracer.Mask(err)

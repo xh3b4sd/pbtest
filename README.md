@@ -21,3 +21,18 @@ mkdir -p ./gen/api/ && protoc --go_out=./gen/api/ --proto_path=./pbf/api/ ./pbf/
 $ go run cli/main.go
 &api.CreateO{Message:"create output", XXX_NoUnkeyedLiteral:struct {}{}, XXX_unrecognized:[]uint8(nil), XXX_sizecache:0}
 ```
+
+
+```
+$ grpcurl -plaintext 0.0.0.0:7777 list
+api.API
+grpc.reflection.v1alpha.ServerReflection
+```
+
+```
+$ grpcurl -plaintext 0.0.0.0:7777 list api.API
+api.API.Create
+api.API.Delete
+api.API.Search
+api.API.Update
+```
