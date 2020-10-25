@@ -9,7 +9,7 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 
-	"github.com/xh3b4sd/pbtest/gen/api"
+	"github.com/xh3b4sd/pbtest/gen/go/api"
 )
 
 func main() {

@@ -7,7 +7,7 @@ import (
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 
-	"github.com/xh3b4sd/pbtest/gen/api"
+	"github.com/xh3b4sd/pbtest/gen/go/api"
 )
 
 func main() {
