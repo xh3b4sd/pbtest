@@ -8,8 +8,8 @@ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc
 ```
 
 ```
-mkdir -p ./gen/api/ && protoc --go-grpc_out=./gen/api/ --proto_path=./pbf/api/ ./pbf/api/*
-mkdir -p ./gen/api/ && protoc --go_out=./gen/api/ --proto_path=./pbf/api/ ./pbf/api/*
+mkdir -p ./gen/go/api/ && protoc --go-grpc_out=./gen/go/api/ --proto_path=./pbf/api/ ./pbf/api/*
+mkdir -p ./gen/go/api/ && protoc --go_out=./gen/go/api/ --proto_path=./pbf/api/ ./pbf/api/*
 ```
 
 ```
