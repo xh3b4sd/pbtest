@@ -13,6 +13,10 @@ mkdir -p ./gen/go/api/ && protoc --go_out=./gen/go/api/ --proto_path=./pbf/api/ 
 ```
 
 ```
+mkdir -p ./gen/ts/api/ && protoc --js_out=import_style=commonjs,binary:./gen/ts/api/ --grpc-web_out=import_style=typescript,mode=grpcwebtext:./gen/ts/api/ --proto_path=./pbf/api/ ./pbf/api/*
+```
+
+```
 & go run srv/main.go
 &api.CreateI{Name:"create input", XXX_NoUnkeyedLiteral:struct {}{}, XXX_unrecognized:[]uint8(nil), XXX_sizecache:0}
 ```
