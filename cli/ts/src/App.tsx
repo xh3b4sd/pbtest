@@ -7,7 +7,7 @@ import { APIClient } from "./api/ApiServiceClientPb";
 import { CreateI, CreateO } from "./api/create_pb";
 
 // What is going on here?
-const client = new APIClient("http://localhost:8080");
+const client = new APIClient("http://0.0.0.0:7777");
 
 function App() {
   console.log("our api:", client);
